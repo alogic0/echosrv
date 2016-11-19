@@ -8,5 +8,6 @@ while True:
 		  data = conn.recv(1024)
 		  if not data: break
 		  conn.send(data)
-		  if data == 'close': break
+		  conn.send(str(len(data)))
+		  if data == 'close\r\n': break
 	  conn.close()
