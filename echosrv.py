@@ -8,5 +8,5 @@ while True:
 		  data = conn.recv(1024)
 		  if not data: break
 		  conn.send(data)
-    	if data == 'close': break
+		  if data == 'close': break
 	  conn.close()
